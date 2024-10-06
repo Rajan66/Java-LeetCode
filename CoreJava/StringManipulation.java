@@ -9,6 +9,7 @@ public class StringManipulation {
         Scanner scanner = new Scanner(System.in);
         int maxAge = Integer.MIN_VALUE; // To store the maximum age
 
+
         while (true) {
             System.out.println("Enter name and age separated by a comma (or press Enter to quit):");
             String input = scanner.nextLine();
