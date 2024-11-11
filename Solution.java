@@ -1,6 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class Solution {
     public boolean containsDuplicate(int[] nums) {
         Map<Integer, Integer> count = new HashMap<>();
@@ -31,5 +32,35 @@ public class Solution {
         }
         return true;
     }
+
+
+    public TreeNode invertTree(TreeNode root) {
+        if (root == null) return null;
+
+        TreeNode temp = root.left;
+        root.left = root.right;
+        root.right = temp;
+
+        invertTree(root.left);
+        invertTree(root.right);
+
+        return root;
+    }
+
+    public int maxDepth(TreeNode root) {
+        if (root == null) return 0;
+
+        int leftDepth = maxDepth(root.left);
+        int rightDepth = maxDepth(root.right);
+
+        if (leftDepth > rightDepth) {
+            return leftDepth + 1;
+        } else {
+            return rightDepth + 1;
+        }
+//        or
+//        return Math.max(leftDepth, rightDepth) + 1;
+    }
+
 }
 
