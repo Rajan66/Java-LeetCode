@@ -87,7 +87,7 @@ public class Solution {
         return true;
     }
 
-    public int[] twoSum(int[] nums, int target) {
+    /*public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> store = new HashMap<>();
         int[] res = new int[2];
         for (int num : nums) {
@@ -97,7 +97,7 @@ public class Solution {
                 return res;
             }
         }
-    }
+    }*/
 
 }
 
