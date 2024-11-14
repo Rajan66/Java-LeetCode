@@ -32,12 +32,13 @@ public class ValidParentheses {
             if (bracketLookup.containsKey(c)) {
                 if (!brackets.isEmpty() && bracketLookup.get(c).equals(brackets.peek())) {
                     brackets.pop();
+                } else {
+                    return false;
                 }
             } else {
                 brackets.push(c);
             }
         }
-
         return brackets.isEmpty();
     }
 }
