@@ -1,2 +1,4 @@
-package InterviewTest;public class ArmStrongNumber {
+package InterviewTest;
+
+public class ArmStrongNumber {
 }
