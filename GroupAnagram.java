@@ -44,7 +44,7 @@ public class GroupAnagram {
 
         for (String word : strs) {
             char[] chars = word.toCharArray();
-            Arrays.sort(strs);
+            Arrays.sort(chars);
             String sortedWord = new String(chars);
 
             if (!map.containsKey(sortedWord)) {

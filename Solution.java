@@ -1,5 +1,4 @@
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 
 public class Solution {
@@ -98,6 +97,21 @@ public class Solution {
             }
         }
     }*/
+    public List<List<String>> groupAnagrams(String[] strs) {
+        HashMap<String, List<String>> result = new HashMap<>();
+
+        for (String str : strs) {
+            char[] charArray = str.toCharArray();
+            Arrays.sort(charArray);
+            String sortedWord = new String(charArray);
+
+            if (!result.containsKey(sortedWord)) {
+                result.put(sortedWord, new ArrayList<>());
+            }
+            result.get(sortedWord).add(str);
+        }
+        return new ArrayList<>(result.values());
+    }
 
 }
 
