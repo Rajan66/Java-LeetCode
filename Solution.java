@@ -113,5 +113,23 @@ public class Solution {
         return new ArrayList<>(result.values());
     }
 
+
+    public List<List<String>> groupAnagrams1(String[] strs) {
+        HashMap<String, List<String>> result = new HashMap<>();
+
+        for (String str : strs) {
+            char[] c = str.toCharArray();
+            Arrays.sort(c);
+            String sortedWord = new String(c);
+
+            if (!result.containsKey(sortedWord)) {
+                result.put(sortedWord, new ArrayList<>());
+            }
+            result.get(sortedWord).add(str);
+        }
+        return new ArrayList<>(result.values());
+    }
+
+
 }
 
