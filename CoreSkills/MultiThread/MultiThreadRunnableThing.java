@@ -1,4 +1,4 @@
-package CoreSkills;
+package CoreSkills.MultiThread;
 
 public class MultiThreadRunnableThing implements Runnable {
     private int threadNumber;

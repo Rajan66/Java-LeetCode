@@ -1,4 +1,4 @@
-package CoreSkills;
+package CoreSkills.MultiThread;
 
 public class MultithreadThing extends Thread {
     private int threadNumber;
