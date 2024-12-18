@@ -12,4 +12,10 @@ public class LengthOfLastElement {
 //        return strArray[strArray.length - 1].length();
         return lastElement.length();
     }
+
+    public static int lengthOfLastWord2(String s) {
+        String[] words = s.split(" ");
+        String lastWord = words[words.length - 1];
+        return lastWord.length();
+    }
 }
